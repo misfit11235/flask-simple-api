@@ -1,2 +1,2 @@
-# simple-flask-api
+# flask-simple-api
 mockup api using flask(python)

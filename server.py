@@ -11,13 +11,14 @@ CORS(app)
 
 def computeHighlight():
     meeting = request.get_json()
-    highlights = []
+    # highlights = []
     
-    for section in meeting["sections"]:
-        highlights.append(fake.paragraph(nb_sentences = 2, variable_nb_sentences = False))
+    # for section in meeting["sections"]:
+    #     highlights.append(fake.paragraph(nb_sentences = 2, variable_nb_sentences = False))
 
-    print(highlights)
-    return jsonify(highlights)
+    # print(highlights)
+    highlight = fake.paragraph(nb_sentences = 2, variable_nb_sentences = False)
+    return jsonify(highlight)
     
 # When run from command line, start the server.
 if __name__ == "__main__":

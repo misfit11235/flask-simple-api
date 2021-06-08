@@ -4,6 +4,7 @@ from flask_cors import CORS
 import numpy as np
 import time
 import json
+import datetime
 
 fake = Faker()
 app = Flask(__name__)
@@ -28,7 +29,7 @@ def computeHighlight():
 def seeTranscript():
     transcript = request.get_json()
     print(transcript)
-    with open('../MeetingTool/static/transcript.json', 'w') as outfile:
+    with open('../MeetingTool/static/transcript-' + str(datetime.datetime.now()) + '.json', 'w') as outfile:
         json.dump(transcript, outfile)
     return "ok"
 
